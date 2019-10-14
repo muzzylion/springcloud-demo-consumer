@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: demo-consumer
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: FPM0238
+Implementation-Vendor-Id: demo-consumer
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/demo-consumer
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,31 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: demo-consumer
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092   # spring bus需要配置的 kafka 地址
+  cloud:
+    stream:
+      bindings:
+        output_1A:
+          destination: users     #发送的topic 
+          contentType: text/plain  #文本类型 
+      kafka:
+        binder:
+          brokers: 127.0.0.1  #Spring Binder 需要配置的 Kafka 地址
+    bus:
+      trace:
+        enabled: true   #开启追踪
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'   #开放消息更新接口
+  trace:
+    http:
+      enabled: true     #开启追踪
